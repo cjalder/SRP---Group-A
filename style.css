@@ -1,0 +1,95 @@
+/*background*/
+#grad1 {
+    background: linear-gradient(rgb(0, 234, 230), rgb(255, 255, 255));
+}
+/*heading one format*/
+h1 {
+    color: black;        
+    text-align: left;
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+h2 {
+    color: black;        
+    text-align: left;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+/* paragraph format */
+p {
+    color: black;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+/* navigation bar formatting */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 234, 230);
+    font-family: Arial, Helvetica, sans-serif;  
+    font-size: 1em;
+}
+li {
+    float: left;
+    border-right: 2px solid white;
+}
+li:last-child {
+    border-right: none;
+}
+li a.active {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+/*dropdown menu formatting*/
+li a, .dropbtn {
+    display:inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(0, 43, 255);
+    color: white;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(0, 43, 255);
+    color: white;
+    position: absolute;
+    z-index: 1;
+}
+.dropdown-content a {
+    color: white;
+    display: block;
+    text-align: left;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+.dropdown-content a:hover {
+    background-color: rgb(240, 240, 240);
+    color: black;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*clearfix to contain element and text as one*/
+.clearfix {
+    overflow: auto;
+}
+
