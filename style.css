@@ -2,7 +2,8 @@
 #grad1 {
     background: linear-gradient(rgb(0, 234, 230), rgb(255, 255, 255));
 }
-/*heading one format*/
+
+/*heading formats*/
 h1 {
     color: black;        
     text-align: left;
@@ -18,15 +19,16 @@ h2 {
     font-weight: bold;
 }
 
-/* paragraph format */
+/*paragraph format*/
 p {
     color: black;
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
+    text-align: justify;
 }
 
-/* navigation bar formatting */
+/*navigation bar formatting*/
 ul {
     list-style-type: none;
     margin: 0;
@@ -93,3 +95,43 @@ li.dropdown {
     overflow: auto;
 }
 
+/*external link styles*/
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited{
+    colour: purple;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+    background-color: black;
+}
+/*columns*/
+.column {
+    float: left;
+    width: 50%; /*change depending on number*/
+    padding: 20px;
+    text-align: justify;
+}
+
+/*image wrapping*/
+.wrapping{
+    float: right;
+    max-width: 100%;
+    height: auto;
+    padding: 0 0 0 20px;
+}
+
+/*footer of each page*/
+.bottom {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75em;
+    background-color: rgb(255, 255, 255);
+    color: rgb(180, 180, 180);
+    font-style: italic;
+}
