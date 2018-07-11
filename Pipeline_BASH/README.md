@@ -4,4 +4,4 @@ The BASH script runs using the directory tree outlined on the PDF file provided.
 
 The BASH script provided is for the SRR1178024 data set run, so adjust the file names in the first tophat run (line 8) appropriately. 
 
-I have also provided the RN4_knowngenes_dup file, with duplicates reads removed via seqkit, which appeared to be the cause of the problem with the original runs. You will need to build bowtie indexes from this for the first run. The indexes used in the second run (The whole_assembly with ERCC spikes) are still fine to use. 
+I have also provided the RN4_knowngenes_dup file (EDIT: In ONEDRIVE), with duplicates reads removed via seqkit, which appeared to be the cause of the problem with the original runs. You will need to build bowtie indexes from this for the first run. The indexes used in the second run (The whole_assembly with ERCC spikes) are still fine to use. 
