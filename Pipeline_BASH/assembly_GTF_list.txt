@@ -1,0 +1,3 @@
+#List of GTF assemblies to merge
+../Known/transcripts.gtf
+../Unmapped/transcripts.gtf
