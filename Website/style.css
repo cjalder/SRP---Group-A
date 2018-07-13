@@ -156,6 +156,15 @@ ul.a {
     
 }
 
+/*search box*/
+#genesearch {
+    width: 25%;
+    font-size: 1em;
+    margin: 5px 5px 5px 5px;
+    padding:10px 5px 10px 5px;
+    border: 2px solid white;
+}
+
 /*footer of each page*/
 .bottom {
     text-align: center;
@@ -167,6 +176,9 @@ ul.a {
     padding: 5px 0 0 0;
 }
 
+.shiny{
+    padding: 10px 10px 10px 10px;
+}
 /*Responsive layout - depending on the size of screen changes layout options 
 @media screen and (max-width: 600px) {
     .column {
