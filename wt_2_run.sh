@@ -40,7 +40,7 @@ stringtie map/59_rn6_sorted.bam -l samples/SRR1178059 -p 4 -G genes/rn6.gtf -o a
 stringtie --merge -p 4 -G genes/rn6.gtf -o stringtie_merged.gtf mergelist.txt
 
 # compare the assembled transcripts to known transcripts
-gffcompare -r genes/rn6.gtf -G -o merged stringtie_merged.gtf
+gffcompare -r genes/rn6.gtf -G -o merged/merged stringtie_merged.gtf
 
 #Abudance Estimation (~10 minutes) [-eB estimate abundances; ]
 stringtie -e -B -p 4 -G stringtie_merged.gtf -o ballgown/SRR1178024/SRR1178024_rn6.gtf map/24_rn6_sorted.bam
