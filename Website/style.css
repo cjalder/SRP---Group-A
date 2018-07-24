@@ -1,18 +1,20 @@
 /*background*/
 .grad1 {
-    background: linear-gradient(rgb(0, 234, 230), rgb(255, 255, 255));
+    background: linear-gradient(rgb(83, 113, 171), rgb(83, 113, 171));
 }
 
 /*heading formats*/
 h1 {
-    color: black;        
+    color: rgb(208, 240, 208);        
     text-align: left;
-    text-decoration: underline;
+    text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    padding: 0 0 0 0;
+    border: 0 0 0 0;
 }
 h2 {
-    color: black;        
+    color: white;        
     text-align: left;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -21,11 +23,12 @@ h2 {
 
 /*paragraph format*/
 p {
-    color: black;
+    color: white;
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     text-align: justify;
+    padding: 0 0 0 0;
 }
 
 /*navigation bar formatting*/
@@ -35,33 +38,33 @@ ul.navi {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(0, 234, 230);
+    background-color: rgb(24, 48, 109);
     font-family: Arial, Helvetica, sans-serif;  
     font-size: 1em;
+    color: white;
+    border-bottom: 2px solid white;
 }
 ul.navi li {
     float: left;
-    border-right: 2px solid white;
+    /*border-right: 2px solid black;*/
 }
-ul.navi li:last-child {
-    border-right: none;
-}
+
 ul.navi li a.active {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 63);
     color: white;
 }
 
 /*dropdown menu formatting*/
 ul.navi li a, .dropbtn {
     display:inline-block;
-    color: black;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 ul.navi li a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(0, 43, 255);
+    background-color: rgb(83, 113, 171);
     color: white;
 }
 
@@ -71,7 +74,7 @@ ul.navi li.dropdown {
 ul.navi .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(0, 43, 255);
+    background-color: rgb(24, 48, 109);
     color: white;
     position: absolute;
     z-index: 1;
@@ -82,23 +85,16 @@ ul.navi .dropdown-content a {
     text-align: left;
     padding: 12px 16px;
     text-decoration: none;
+    border: 1px 1px 1px 1px solid white;
 }
 ul.navi .dropdown-content a:hover {
-    background-color: rgb(240, 240, 240);
-    color: black;
+    background-color: rgb(83, 113, 171);
+    color: white;
 }
 ul.navi .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/*paragraph format*/
-p {
-    color: black;
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    text-align: justify;
-}
 
 /*clearfix to contain element and text as one*/
 .clearfix {
@@ -107,12 +103,12 @@ p {
 
 /*external link styles*/
 a.external:link {
-    color: black;
+    color: white;
     background-color: transparent;
     text-decoration: none;
 }
 a.external:visited{
-    colour: purple;
+    color: white;
     background-color: transparent;
     text-decoration: none;
 }
@@ -125,16 +121,18 @@ a.external:hover{
 .column2 {
     float: left;
     width: 50%; /*change depending on number*/
-    padding: 20px;
+    padding: 0 20px 0 20px;
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 .column3{
     float: left;
-    width: 30%; 
+    width: 40%; 
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
+    color: white;
 }
 .row:after {
     content:"";
@@ -158,22 +156,22 @@ ul.a {
 
 /*search box*/
 #genesearch {
-    width: 25%;
+    width: 33.3%;
     font-size: 1em;
     margin: 5px 5px 5px 5px;
     padding:10px 5px 10px 5px;
     border: 2px solid white;
 }
 
+
 /*footer of each page*/
 .bottom {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.75em;
-    background-color: rgb(255, 255, 255);
-    color: rgb(180, 180, 180);
     font-style: italic;
-    padding: 5px 0 0 0;
+    padding: 5px 0 5px 0;
+    color: rgb(160, 160, 160);
 }
 
 .shiny{
