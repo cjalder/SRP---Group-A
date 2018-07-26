@@ -1,7 +1,16 @@
+
 /*background*/
 .grad1 {
     background: linear-gradient(rgb(83, 113, 171), rgb(83, 113, 171));
 }
+
+/*borders*/
+html, head, body, foot {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
 
 /*heading formats*/
 h1 {
@@ -12,6 +21,7 @@ h1 {
     font-weight: bold;
     padding: 0 0 0 0;
     border: 0 0 0 0;
+    margin: 15px 0 0 15px;
 }
 h2 {
     color: white;        
@@ -19,6 +29,7 @@ h2 {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    margin: 15px 0px 0 15px;
 }
 
 /*paragraph format*/
@@ -29,6 +40,7 @@ p {
     font-weight: normal;
     text-align: justify;
     padding: 0 0 0 0;
+    margin: 15px 15px 15px 15px;
 }
 
 /*navigation bar formatting*/
@@ -121,7 +133,6 @@ a.external:hover{
 .column2 {
     float: left;
     width: 50%; /*change depending on number*/
-    padding: 0 20px 0 20px;
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
@@ -145,7 +156,7 @@ a.external:hover{
     float: right;
     max-width: 100%;
     height: auto;
-    padding: 0 0 10px 20px;
+    padding: 15px 15px 15px 15px;
 }
 
 /*unordered list formatting*/
@@ -163,7 +174,6 @@ ul.a {
     border: 2px solid white;
 }
 
-
 /*footer of each page*/
 .bottom {
     text-align: center;
@@ -173,6 +183,8 @@ ul.a {
     padding: 5px 0 5px 0;
     color: rgb(160, 160, 160);
 }
+
+
 
 .shiny{
     padding: 10px 10px 10px 10px;

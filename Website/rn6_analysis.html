@@ -5,7 +5,31 @@
     <title>RN6 Analysis</title>
     <meta charset="UTF-8"/>
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
-    <!--base href="https..... add in-->
+
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" type="text/css"
+          href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"/>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
+    <!-- IGV CSS -->
+    <link rel="stylesheet" type="text/css" href="https://igv.org/web/release/1.0.9/igv-1.0.9.css">
+    <!-- bam.css n - for demo only, NOT REQUIRED FOR IGV -->
+    <link rel="stylesheet" type="text/css" href="css/bam.css">
+    <!-- jQuery JS -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <!-- IGV JS-->
+    <script type="text/javascript" src="https://igv.org/web/release/1.0.9/igv-1.0.9.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-92237317-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </head>
 <!--body begins here -->
 <body>
@@ -14,6 +38,7 @@
             <li><a href="homepage.html">Home</a></li>
             <li><a href="rn4_analysis.html">RN4 Analysis</a></li>
             <li><a class="active" href="rn6_analysis.html">RN6 Analysis</a></li>
+            <li><a href="diff_exp.html">Gene Expression</a>
             <li class="dropdown">
                 <a class="dropbtn">Pipelines</a>
                 <div class="dropdown-content">
@@ -21,13 +46,54 @@
                     <a href="updated_pipeline.html">Updated Pipeline</a>
                 </div></li>
             <li><a href="software.html">Software</a></li>
-            <li><a href="diff_exp.html">Gene Expression</a>
         </ul>
         <!--iframe allows RShiny to be in webpage. IN PROGRESS-->
         <div class="shiny">
-        <iframe src="http://bioinf6.bioc.le.ac.uk:3838/citt/hello/" style="height: 325px; width:100%; border: 2px solid black"></iframe>
+        <p>Volcano Plot showing DEGs</p>
+        <iframe src="http://bioinf6.bioc.le.ac.uk:3838/srpgrpa/Volcano_rn6/" style="width:100%; height:625px; border: 2px solid black"></iframe>
         </div>
+        <div class="jumbotron">
+        <div class="container">
+            <h2>IGV</h2>
+        </div>
+        <!-- container -->
+        </div>
+        <!-- jumbotron -->
+        <div class="container-fluid" id="igvDiv" style="padding:5px; border:1px solid lightgray"></div>
+        <script type="text/javascript">
+            $(document).ready(function () {   
+                var div = $("#igvDiv")[0],
+                        options = {
+                            showNavigation: true,
+                            showRuler: true,
+                            reference: {
+                                id: "rn6"
+                            },
+                            genome: "rn6",
+                            locus: "chr8:128,747,267-128,754,546",
+                            tracks: [
+                                {
+                                    name: "Genes",
+                                    type: "annotation",
+                                    format: "bed",
+                                    sourceType: "file",
+                                    url: "http://bioinf6.bioc.le.ac.uk/~srpgrpa/public_html/RN6_orig/rn6_refseq.fa.gz",
+                                    indexURL: "http://bioinf6.bioc.le.ac.uk/~srpgrpa/public_html/RN6_orig/merged.gtf",
+                                    order: Number.MAX_VALUE,
+                                    visibilityWindow: 300000000,
+                                    displayMode: "EXPANDED"
+                                }, {
+                                    url: 'http://bioinf6.bioc.le.ac.uk/~srpgrpa/public_html/RN6_orig/BAM_files/SRR1178024.bam',
+                                    indexURL: "http://bioinf6.bioc.le.ac.uk/~srpgrpa/public_html/RN6_orig/BAM_files/SRR1178024.bam.bai",
+                                    name: "Control 23"
+                                }
+                            ]
+                        };
+                igv.createBrowser(div, options);
+            });
+        </script>
+    
+        <p class="bottom"> This website has been made to display our Analysis of Wang et al, 2014, data with our updated pipeline, as part of an MSc Project at the University of Leicester, UK.<br> <text-align="center">&#9400; 2018</p>
     </div>
-    <p class="bottom"> This website has been made to display our Analysis of Wang et al, 2014, data with our updated pipeline, as part of an MSc Project at the University of Leicester, UK.<br> <text-align="center">&#9400; 2018</p>
 </body>
 </html>

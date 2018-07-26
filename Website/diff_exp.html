@@ -14,6 +14,7 @@
             <li><a href="homepage.html">Home</a></li>
             <li><a href="rn4_analysis.html">RN4 Analysis</a></li>
             <li><a href="rn6_analysis.html">RN6 Analysis</a></li>
+            <li><a href="diff_exp">Gene Expression</a>
             <li class="dropdown">
                 <a class="dropbtn">Pipelines</a>
                 <div class="dropdown-content">
@@ -21,39 +22,17 @@
                     <a href="updated_pipeline.html">Updated Pipeline</a>
                 </div></li>
             <li><a href="software.html">Software</a></li>
-            <li><a class="active" href="diff_exp">Gene Expression</a>
         </ul>
-        <p>Enter Gene ID to see specific differential gene expression</p>
-        <input type="text" id="genesearch" onkeyup="genesearch()" placeholder="Gene ID...." title="Enter Gene ID"/>
-        <ul id="geneID">
-            <li>ABC123</li>
-            <li>DEF234</li>
-            <li>GHI567</li>
-            <li>BCD459</li>
-            <li>JHK009</li>
-            <li>ZZZ989</li>
-            <li>PLP111</li>
-        </ul>
-
+        <div>
+        <form>
+        <input type="text" sixe="30" onkeyup="showResult(this.value)">
+        <div id="livesearch"></div>
+        </form>
+        </div>
     </div>
     <p class="bottom"> This website has been made to display our Analysis of Wang et al, 2014, data with our updated pipeline, as part of an MSc Project at the University of Leicester, UK.<br> <text-align="center">&#9400; 2018</p> 
 <!--THIS DOES NOT WORK MAYBE CSS ISSUE-->
-<script> 
-function genesearch() {
-    var input, filter, ul, li, i;
-    input = document.getElementById("genesearch");
-    filter = input.value.toUpperCase();
-    ul = document.get_ElementsById("geneID");
-    li = ul.getElementsByTagName("li");
-    for i = 0; < li.length; i ++) {
-        a = li[i].getElementsByTagName("li")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-</script>
+<script src="/JS/livesearch.js"></script>
+
 </body>
 </html>
