@@ -1,0 +1,5 @@
+/home/bsc10/SRP/Pipeline5/Endpoint/24/transcripts.gtf
+/home/bsc10/SRP/Pipeline5/Endpoint/35/transcripts.gtf
+/home/bsc10/SRP/Pipeline5/Endpoint/59/transcripts.gtf
+/home/bsc10/SRP/Pipeline5/Endpoint/33/transcripts.gtf
+/home/bsc10/SRP/Pipeline5/Endpoint/43/transcripts.gtf

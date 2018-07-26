@@ -1,0 +1,52 @@
+#!/bin/bash
+#cd 33/
+#cd Tophat &&
+#/home/bsc10/SRP/Pipeline6/tophat-2.0.0.Linux_x86_64/tophat -p 3 -r 160 -g 10 -G /home/bsc10/SRP/Pipeline5/Indexes/try2/rn6_refseq.gtf /home/bsc10/SRP/Pipeline5/Indexes/rn6_unmapped /home/bsc10/SRP/Pipeline5/33/SRR1178033_1.fastq /home/bsc10/SRP/Pipeline5/33/SRR1178033_2.fastq &&
+#cd ../Cufflinks &&
+#cufflinks ../Tophat/tophat_out/accepted_hits.bam &&
+
+#cd 43/
+#mkdir Tophat &&
+#mkdir Cufflinks &&
+#cd Tophat &&
+#/home/bsc10/SRP/Pipeline6/tophat-2.0.0.Linux_x86_64/tophat -p 3 -r 160 -g 10 -G /home/bsc10/SRP/Pipeline5/Indexes/try2/rn6_refseq.gtf /home/bsc10/SRP/Pipeline5/#Indexes/rn6_unmapped /home/bsc10/SRP/Pipeline5/43/SRR1178043_1.fastq /home/bsc10/SRP/Pipeline5/43/SRR1178043_2.fastq &&
+#cd ../Cufflinks &&
+#cufflinks ../Tophat/tophat_out/accepted_hits.bam &&
+
+cd /home/bsc10/SRP/Pipeline5/Endpoint/Merged &&
+#mkdir Merged &&
+#mkdir 24 &&
+#mkdir 35 &&
+#mkdir 59 &&
+#mkdir 33 &&
+#mkdir 43 &&
+#mkdir Step_4 &&
+#mkdir Step_5 &&
+#mkdir Step_6 &&
+#cd Merged &&
+#cuffmerge -g /home/bsc10/SRP/Pipeline5/Indexes/try2/rn6_refseq.gtf -p 2 /home/bsc10/SRP/Pipeline5/first_merge.txt &&
+#
+#cd ../24/ &&
+#cufflinks -g /home/bsc10/SRP/Pipeline5/Endpoint/Merged/merged_asm/merged.gtf -p 2 /home/bsc10/SRP/Pipeline5/24/Tophat/tophat_out/accepted_hits.bam &&
+
+#cd ../35/ &&
+#cufflinks -g /home/bsc10/SRP/Pipeline5/Endpoint/Merged/merged_asm/merged.gtf -p 2 /home/bsc10/SRP/Pipeline5/35/Tophat/tophat_out/accepted_hits.bam &&
+
+#cd ../59/ &&
+#cufflinks -g /home/bsc10/SRP/Pipeline5/Endpoint/Merged/merged_asm/merged.gtf -p 2 /home/bsc10/SRP/Pipeline5/59/Tophat/tophat_out/accepted_hits.bam &&
+
+#cd ../33/ &&
+#cufflinks -g /home/bsc10/SRP/Pipeline5/Endpoint/Merged/merged_asm/merged.gtf -p 2 /home/bsc10/SRP/Pipeline5/33/Tophat/tophat_out/accepted_hits.bam &&
+
+#cd ../43/ &&
+#cufflinks -g /home/bsc10/SRP/Pipeline5/Endpoint/Merged/merged_asm/merged.gtf -p 2 /home/bsc10/SRP/Pipeline5/43/Tophat/tophat_out/accepted_hits.bam &&
+
+#cd ../Step_4 &&
+#cuffmerge -g /home/bsc10/SRP/Pipeline5/This/rn6_refseq_rename.gtf -p 2 /home/bsc10/SRP/Pipeline5/Final/cuffmerge_wreference/merge &&
+
+cd ../Step_5 &&
+
+cuffdiff -p 2 /home/bsc10/SRP/Pipeline5/Endpoint/Step_4/merged_asm/merged.gtf -L Controls,GEM /home/bsc10/SRP/Pipeline5/24/Tophat/tophat_out/accepted_hits.bam,/home/bsc10/SRP/Pipeline5/35/Tophat/tophat_out/accepted_hits.bam /home/bsc10/SRP/Pipeline5/33/Tophat/tophat_out/accepted_hits.bam,/home/bsc10/SRP/Pipeline5/43/Tophat/tophat_out/accepted_hits.bam,/home/bsc10/SRP/Pipeline5/59/Tophat/tophat_out/accepted_hits.bam
+
+
+

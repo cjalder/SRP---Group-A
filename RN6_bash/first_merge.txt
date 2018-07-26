@@ -1,0 +1,6 @@
+#List of GTF assemblies to merge
+/home/bsc10/SRP/Pipeline5/24/Cufflinks/transcripts.gtf
+/home/bsc10/SRP/Pipeline5/35/Cufflinks/transcripts.gtf
+/home/bsc10/SRP/Pipeline5/59/Cufflinks/transcripts.gtf
+/home/bsc10/SRP/Pipeline5/33/Cufflinks/transcripts.gtf
+/home/bsc10/SRP/Pipeline5/43/Cufflinks/transcripts.gtf
