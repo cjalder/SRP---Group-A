@@ -1,1 +1,7 @@
 bash stuff
+rn6_refseq.gtf = original gtf download straight from UCSC table
+rn6_refseqID-Names.txt = Gene Names only form UCSC
+rn6_refseq_rename.gtf = correct gene names
+
+nowfinal = the most recent bash script used
+first_merge.txt and second_merge.txt part of the nowfinal bash script
