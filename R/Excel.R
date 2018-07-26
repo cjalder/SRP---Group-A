@@ -21,7 +21,7 @@ table <- table[,c(1,2,6,7,8,10)]
 row.names(table) <- NULL
 ## List of old row names and their replacements
 oldrows <- c("Row.names","x","value_1","value_2","log2_fold_change","p_value")
-newrows <- c("Cufflinks_Gene_ID","Gene_Symbol","FKPM_Controls", "FKPM_GEM", "Log2FC","P_Value")
+newrows <- c("Cufflinks_Gene_ID","Gene_Symbol","FPKM_Controls", "FPKM_GEM", "Log2FC","P_Value")
 ## Loop to change names
 for(i in 1:6) colnames(table)[colnames(table) == oldrows[i]] = newrows[i]
 ## Export to Excel
