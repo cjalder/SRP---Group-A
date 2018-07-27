@@ -12,9 +12,7 @@ table <- diffData(diffGenes)
 row.names(table)=table$gene_id
 table<-table[,-1]
 table<-merge(diffGenesNames,table,by="row.names")
-# Gene symbol names as NA replaced with Cufflinks Gene ID
-table$x <- as.character(table$x)
-table$x[is.na(table$x)] <- table$Row.names[is.na(table$x)]
+table <-table[!is.na(table$x),]
 # removes genes not deemed differentially expressed
 table <-table[!(table$log2_fold_change > -1.5 & table$log2_fold_change < 1.5 ),]
 table <- table[,c(1,2,6,7,8,10)]
