@@ -6,7 +6,7 @@ library(tidyverse)
 library(RSQLite)
 
 ui <- fluidPage(
-  titlePanel("RN4 vs RN6 FPKM"),
+  titlePanel("RN4 vs RN6 Expression Comparison"),
   fluidRow(
     column(
       width = 6,
@@ -85,8 +85,8 @@ ggplot(final, aes(x = log10_fpkmrn4, y = log10_fpkmrn6), color="darkred") +
     nearPoints(final, input$PlotSelection) %>%
       transmute(
         'Gene' = x,
-        `FPKM RN4` = signif(log10_fpkmrn4, digits = 4),
-        `FPKM RN6` = signif(log10_fpkmrn6, digits = 4)
+        `log10(FPKM) RN4` = signif(log10_fpkmrn4, digits = 4),
+        `log10(FPKM) RN6` = signif(log10_fpkmrn6, digits = 4)
       ),
 
     options = list(dom = "tip", pageLength = 10, searching = FALSE)
