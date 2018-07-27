@@ -5,7 +5,11 @@
     <title>Gene Expression</title>
     <meta charset="UTF-8"/>
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
-    <!--base href="https..... add in-->
+    <link rel="stylesheet" type="text/css" href="css/bam.css">
+    <!-- jQuery JS -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 </head>
 <!--body begins here -->
 <body>
@@ -24,10 +28,32 @@
             <li><a href="software.html">Software</a></li>
         </ul>
         <div>
-        <form>
-        <input type="text" sixe="30" onkeyup="showResult(this.value)">
-        <div id="livesearch"></div>
-        </form>
+
+  <div class='ui text container toppad'>
+    <form class='item' method='GET' action='/search'>
+      <div class='ui massive fluid action input'>
+        <input type='text' placeholder='Enter some terms to search for' name='q' value='hi' autofocus>
+        
+          <input type='hidden' name='package' value='shinyWidgets'>
+          <input type='hidden' name='repo' value='cran'>
+        
+        <button class='ui massive green button'>Search</button>
+      </div>
+    </form>
+
+    
+      <div class='ui info message'>Searching within the <a href='/GeneNames/'>Gene Names</a></div>
+    
+
+    
+      
+
+      
+        <div class='ui warning message'>No results found.</div>
+      
+    
+  </div>
+
         </div>
     </div>
     <p class="bottom"> This website has been made to display our Analysis of Wang et al, 2014, data with our updated pipeline, as part of an MSc Project at the University of Leicester, UK.<br> <text-align="center">&#9400; 2018</p> 
