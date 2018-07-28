@@ -6,7 +6,7 @@
     <title>Homepage</title>
     <meta charset="UTF-8"/>
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
-    <!--base href="https..... add in-->
+
 </head>
 
 <!--Body begins here-->
@@ -17,29 +17,36 @@
         <li><a href="rn4_analysis.html">RN4 Analysis</a></li>
         <li><a href="rn6_analysis.html">RN6 Analysis</a></li>
         <li><a href="diff_exp.html">Gene Expression</a>
-        <li class="dropdown">
-            <a class="dropbtn">Pipelines</a>
-            <div class="dropdown-content">
-                <a href="original_pipeline.html">Original Pipeline</a>
-                <a href="updated_pipeline.html">Updated Pipeline</a>
-            </div></li>
         <li><a href="software.html">Software</a></li>
+        <li><a href="data.html">Supplementary Data</a></li>
     </ul> 
+    <div class="row">
     <div class="column2">
         <h1>About</h1>
-            <p>We have re-run the analysis that <a class="external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4243706/" target="_blank" title="Go to Original Paper"> Wang et al, 2014 </a>, performed to analyse the difference in gene expression when using more recent reference genomes and an updated analysis pipeline. </p><br>
+            <p>We have re-run the analysis that <a class="external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4243706/" target="_blank" title="Go to Original Paper">Wang et al, 2014</a> performed to analyse the difference in gene expression when using Rat Genome 4 (RN4) and the more recent Rat Genome 6 (RN6) and against an updated analysis pipeline. </p><hr>
+        <h1> Gemfibrozil </h1>
+        <p> Gemfibrozil is an oral drug which lowers lipid levels. It is a part of a group of drugs known as fibrates. It interacts with perixisome proliferator-activated receptors (PPARalpha) which results in a PPARalpha-mediated stimulation of fatty acid oxidation and increases lipoprotein liapse (LPL) synthesis.<br><a class="external" href="https://pubchem.ncbi.nlm.nih.gov/compound/gemfibrozil" target="_blank">[Source: Pubchem.ncbi.nih.gov]</a></p>
+        <a href="https://www.molinstincts.com/chemical-formula/Gemfibrozil-d6-cfml-CT1088596433.html" target="_blank" title="Go to Source: Molinstincts.com"><img src="Images/gemfibrozil.png" alt="3D Molecular model of Gemfibrozil" height="100%" width="auto""></a>
+    </div>
+    <div class="column2a">
         <h1>Analysis</h1>
-            <p> We have analysed Wang et al's (2014) Pipeline 5 with the Rat Genome 4 (RN4), and Rat Genome 6 (RN6). As well as running both Genomes througha more up-to-date pipeline consisting of Hisat, Stringtie and Ballgown.</p>
+        <h2>Original Pipeline</h2>
+            <img src="Images/pipeline5.png" alt="Pipleine 5 as illustrated by Wang et al, Supplementary Data 2" title="Pipleine 5 as illustrated by Wang et al, Supplementary Data 2." style="float: centre; max-width:100%; height: auto;">
+            <p>We have analysed Wang et al's Pipeline 5 with the RN4 and RN6. They used TopHat with Bowtie to align the sequences from the Rat livers to Rat Genome 4 from RefSeq. Then Cufflinks was used to assemble the transcripts. Cufflinks was initially run without an annotation genome to find any novel transcripts, then cuffmerge to create a large merged assembly. This merged assembly was then used as the reference genome to estimate isoform and gene- level expression values as Fragments per Kilobase per Million reads (FKPM). 
+normalized.</p>
+            <p><a class="external" href="rn4_analysis.html"><h3>Result of RN4 Analysis</h3></a></p>
+            <p><a class="external" href="rn6_analysis.html"><h3>Result of RN6 Analysis</h3></a></p><hr>
+
+        <h2>Updated Pipeline</h2>
+            <img src="Images/updated_pipeline_fig.jpg" alt="Updated Pipeline" title="Updated Pipeline" style="float:centre; max-width:100%; height: auto;">
+            <p>We then ran a more updated pipeline based on <a class="external" href="http://www.nature.com/articles/nprot.2016.095" title="Pertea et al. 2018." target="_blank">Pertea et al, 2018</a> using Hisat2 with Stringtie to align, assemble, and estimate abundances for, the sequences from the Rat livers to RN4 and RN6 from RefSeq. The samples – paired end reads were taken by Hisat2 (grey) and mapped to a pre-built index of the RN4 and RN6 genomes. StringTie (green) was then used for assembly with the aid of a RefSeq annotation. Assembled reads were merged and used as a guide for StringTie -eB to calculate abundance estimation. This results were stored in a .gtf annotation file. This gave values for transcript expression levels in FKPM and TPM (Transcripts Per Million).</p>
+            <p><a class="external" href="rn4_analysis.html"><h3>Result of RN4 Analysis</h3></a></p>
+            <p><a class="external" href="rn6_analysis.html"><h3>Result of RN6 Analysis</h3></a></p><hr>
     </div>
-    <div class="column2">
-        <div class="clearfix">
-            <h1> Gemfibrozil </h1>
-            <a class="external" href="https://www.molinstincts.com/chemical-formula/Gemfibrozil-d6-cfml-CT1088596433.html" target="_blank" title="Go to Source: Molinstincts.com">
-            <img src="Images/gemfibrozil.png" alt="3D Molecular model of Gemfibrozil" class="wrapping" height="100px" width="auto"></a>
-            <p> Gemfibrozil is an oral drug which lowers lipid levels. It is a part of a group of drugs known as fibrates. It interacts with perixisome proliferator-activated receptors (PPARalpha) which results in a PPARalpha-mediated stimulation of fatty acid oxidation and increases lipoprotein liapse (LPL) synthesis.<br>
-            <a class="external" href="https://pubchem.ncbi.nlm.nih.gov/compound/gemfibrozil" target="_blank">[Source: Pubchem.ncbi.nih.gov]</a></p>
-        </div>
     </div>
+    <div>
     <p class="bottom">This website has been made to display our Analysis of Wang et al, 2014, data with our updated pipeline, as part of an MSc Project at the University of Leicester, UK.<br><text-align="center">&#9400; 2018</p>
+    </div>
+</div>
 </body>
 </html>

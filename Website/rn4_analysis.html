@@ -1,38 +1,52 @@
 <!DOCTYPE html>
 <html>
+<!--Header-->
 <head>
     <link rel="stylesheet" href="style.css"/>
     <title>RN4 Analysis</title>
     <meta charset="UTF-8"/>
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
-    <!--base href="https..... add in-->
-    <!--IGV CSS -->
-    <link rel="stylesheet" href="https://igv.org/web/release/1.0.9/igv-1.0.9.css">
-    <link rel="stylesheet" href="https://igv.org.web/beta/igv.css">
-    <script src="https://igv.org/web/beta/igv-beta.min.js"></script>
+
 </head>
-<!--body begins here -->
+
+<!--Body begins here-->
 <body>
-    <div class="grad1">
-        <ul class="navi"> <!--navigation bar-->
-            <li><a href="homepage.html">Home</a></li>
-            <li><a class="active" href="rn4_analysis.html">RN4 Analysis</a></li>
-            <li><a href="rn6_analysis.html">RN6 Analysis</a></li>
-            <li><a href="diff_exp.html">Gene Expression</a>
-            <li class="dropdown">
-                <a class="dropbtn">Pipelines</a>
-                <div class="dropdown-content">
-                    <a href="original_pipeline.html">Original Pipeline</a>
-                    <a href="updated_pipeline.html">Updated Pipeline</a>
-                </div></li>
-            <li><a href="software.html">Software</a></li>
-        </ul>
-        <div class="shiny">
-        <p>Volcano Plot showing DEGs</p>
-        <iframe src="http://bioinf6.bioc.le.ac.uk:3838/srpgrpa/Volcano_rn4/" style="width:100%; height:625px; border: 2px solid black"></iframe>
-        </div>
-        <p class="bottom"> This website has been made to display our Analysis of Wang et al, 2014, data with our updated pipeline, as part of an MSc Project at the University of Leicester, UK.<br> <text-align="center">&#9400; 2018</p>
+<div class="grad1">
+    <ul class="navi"> <!--navigation bar-->
+        <li><a href="homepage.html">Home</a></li>
+        <li><a class="active" href="rn4_analysis.html">RN4 Analysis</a></li>
+        <li><a href="rn6_analysis.html">RN6 Analysis</a></li>
+        <li><a href="diff_exp.html">Gene Expression</a>
+        <li><a href="software.html">Software</a></li>
+        <li><a href="data.html">Supplementary Data</a></li>
+    </ul> 
+    <h1>RN4 Analysis</h1>
+        <p></p>
+    <div class="row">
+    <div class="column3">
+        <h2>Original Pipeline</h2><br>
+           <hr><a class="external" href="rn4_orig_igv.html" target="_blank"><h3 style="margin:15px;">IGV</h3></a><hr>
+        <h3>Controls vs GEMs</h3>
+            <iframe src="http://bioinf6.bioc.le.ac.uk:3838/srpgrpa/Volcano_rn4/" style="width:100%; height:625px; border: 2px solid black"></iframe><hr>  
+            <!--NEEDS CORRECT LINKS for control vs control-->
+        <h3>Controls vs Controls</h3>
+            <iframe src="http://bioinf6.bioc.le.ac.uk:3838/srpgrpa/Volcano_rn4/" style="width:100%; height:625px; border: 2px solid black"></iframe> 
     </div>
-    </script>
+    <div class="column3">
+        <h2>Updated Pipeline</h2><br>
+            <hr><a class="external" href="rn4_upd_igv.html" target="_blank"><h3 style="margin:15px;">IGV</h3></a><hr>
+            <!--MISSING VOLCANO PLOT FOR UPDATED PIPELINE-->
+        <h3>Controls vs GEMs</h3>
+            <iframe src="http://bioinf6.bioc.le.ac.uk:3838/srpgrpa/Volcan_rn4_updt/" style="width:100%; height:625px; border: 2px solid black"></iframe><hr>
+            <!--NEEDS CORRECT LINKS for control vs control-->
+        <h3>Controls vs Controls</h3>
+            <iframe src="http://bioinf6.bioc.le.ac.uk:3838/srpgrpa/Volcano_rn4/" style="width:100%; height:625px; border: 2px solid black"></iframe>
+    </div>
+    </div>
+    <div>
+    <p class="bottom">This website has been made to display our Analysis of Wang et al, 2014, data with our updated pipeline, as part of an MSc Project at the University of Leicester, UK.<br><text-align="center">&#9400; 2018</p>
+    </div>
+    </div>
+</div>
 </body>
 </html>
