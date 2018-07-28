@@ -3,6 +3,7 @@
 <!--Header-->
 <head>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="prefetch" href="http://bioinf6.bioc.le.ac.uk:3838/srpgrpa/Volcano_rn6/">
     <title>Homepage</title>
     <meta charset="UTF-8"/>
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
@@ -26,14 +27,13 @@
             <p>We have re-run the analysis that <a class="external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4243706/" target="_blank" title="Go to Original Paper">Wang et al, 2014</a> performed to analyse the difference in gene expression when using Rat Genome 4 (RN4) and the more recent Rat Genome 6 (RN6) and against an updated analysis pipeline. </p><hr>
         <h1> Gemfibrozil </h1>
         <p> Gemfibrozil is an oral drug which lowers lipid levels. It is a part of a group of drugs known as fibrates. It interacts with perixisome proliferator-activated receptors (PPARalpha) which results in a PPARalpha-mediated stimulation of fatty acid oxidation and increases lipoprotein liapse (LPL) synthesis.<br><a class="external" href="https://pubchem.ncbi.nlm.nih.gov/compound/gemfibrozil" target="_blank">[Source: Pubchem.ncbi.nih.gov]</a></p>
-        <a href="https://www.molinstincts.com/chemical-formula/Gemfibrozil-d6-cfml-CT1088596433.html" target="_blank" title="Go to Source: Molinstincts.com"><img src="Images/gemfibrozil.png" alt="3D Molecular model of Gemfibrozil" height="100%" width="auto""></a>
+        <a href="https://www.molinstincts.com/chemical-formula/Gemfibrozil-d6-cfml-CT1088596433.html" target="_blank" title="Go to Source: Molinstincts.com"><img src="Images/gemfibrozil.png" alt="3D Molecular model of Gemfibrozil"></a>
     </div>
     <div class="column2a">
         <h1>Analysis</h1>
         <h2>Original Pipeline</h2>
             <img src="Images/pipeline5.png" alt="Pipleine 5 as illustrated by Wang et al, Supplementary Data 2" title="Pipleine 5 as illustrated by Wang et al, Supplementary Data 2." style="float: centre; max-width:100%; height: auto;">
-            <p>We have analysed Wang et al's Pipeline 5 with the RN4 and RN6. They used TopHat with Bowtie to align the sequences from the Rat livers to Rat Genome 4 from RefSeq. Then Cufflinks was used to assemble the transcripts. Cufflinks was initially run without an annotation genome to find any novel transcripts, then cuffmerge to create a large merged assembly. This merged assembly was then used as the reference genome to estimate isoform and gene- level expression values as Fragments per Kilobase per Million reads (FKPM). 
-normalized.</p>
+            <p>We have analysed Wang et al's Pipeline 5 with the RN4 and RN6. They used TopHat with Bowtie to align the sequences from the Rat livers to Rat Genome 4 from RefSeq. Then Cufflinks was used to assemble the transcripts. Cufflinks was initially run without an annotation genome to find any novel transcripts, then cuffmerge to create a large merged assembly. This merged assembly was then used as the reference genome to estimate isoform and gene- level expression values as Fragments per Kilobase per Million reads (FKPM) normalized.</p>
             <p><a class="external" href="rn4_analysis.html"><h3>Result of RN4 Analysis</h3></a></p>
             <p><a class="external" href="rn6_analysis.html"><h3>Result of RN6 Analysis</h3></a></p><hr>
 
@@ -44,7 +44,7 @@ normalized.</p>
             <p><a class="external" href="rn6_analysis.html"><h3>Result of RN6 Analysis</h3></a></p><hr>
     </div>
     </div>
-    <div>
+    <div class="row">
     <p class="bottom">This website has been made to display our Analysis of Wang et al, 2014, data with our updated pipeline, as part of an MSc Project at the University of Leicester, UK.<br><text-align="center">&#9400; 2018</p>
     </div>
 </div>

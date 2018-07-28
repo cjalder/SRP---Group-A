@@ -75,8 +75,8 @@ img {
     padding: 0px;
     border: 0px;
     float: center;
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 97%;
 }
 
 /*navigation bar formatting*/
