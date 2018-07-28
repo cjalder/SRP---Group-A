@@ -1,7 +1,12 @@
+/*
+ * {
+    border: 2px solid black;
+} */
 
 /*background*/
-.grad1 {
+body {
     background: linear-gradient(rgb(83, 113, 171), rgb(83, 113, 171));
+    width: 100%;
 }
 
 /*borders*/
@@ -14,7 +19,7 @@ html, head, body, foot {
 
 /*heading formats*/
 h1 {
-    color: rgb(208, 240, 208);        
+    color: rgb(179, 255, 231);        
     text-align: left;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -23,13 +28,23 @@ h1 {
     border: 0 0 0 0;
     margin: 15px 0 0 15px;
 }
+
 h2 {
+    color: rgb(204, 255, 204);        
+    text-align: left;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 15px 0px 0px 15px;
+}
+
+h3 {
     color: white;        
     text-align: left;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    margin: 15px 0px 0 15px;
+    margin: 5px 0px 10px 17px;
 }
 
 /*paragraph format*/
@@ -39,8 +54,29 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     text-align: justify;
-    padding: 0 0 0 0;
+    padding: 0px;
+    margin: 5px 0px 10px 17px;
+}
+
+/*hr splitter*/
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+} 
+
+/*image formatting*/
+img {
     margin: 15px 15px 15px 15px;
+    padding: 0px;
+    border: 0px;
+    float: center;
+    height: 100%;
+    width: auto;
 }
 
 /*navigation bar formatting*/
@@ -132,18 +168,38 @@ a.external:hover{
 /*columns*/
 .column2 {
     float: left;
-    width: 50%; /*change depending on number*/
+    width: 25%; /*change depending on number*/
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    margin: 5px 5px 5px 5px;
 }
-.column3{
+
+.column2a {
     float: left;
-    width: 40%; 
+    width: 70%; /*change depending on number*/
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 5px 5px 5px 5px;
+    border: 0px 5px 0px 0px solid white;
+}
+
+.column3 {
+    float: left;
+    width: 49%; 
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
     color: white;
+    margin: 0px;
+    padding: 5px;
+
+}
+
+.row {
+    float: center;
+    
 }
 .row:after {
     content:"";
@@ -153,10 +209,10 @@ a.external:hover{
 
 /*image wrapping*/
 .wrapping{
-    float: right;
+    float: center;
     max-width: 100%;
     height: auto;
-    padding: 15px 15px 15px 15px;
+    margin: 15px 15px 15px 15px;
 }
 
 /*unordered list formatting*/
@@ -170,7 +226,7 @@ ul.a {
     width: 33.3%;
     font-size: 1em;
     margin: 5px 5px 5px 5px;
-    padding:10px 5px 10px 5px;
+    margin:10px 5px 10px 5px;
     border: 2px solid white;
 }
 
@@ -180,8 +236,10 @@ ul.a {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.75em;
     font-style: italic;
-    padding: 5px 0 5px 0;
+    margin: 5px 0 5px 0;
     color: rgb(160, 160, 160);
+    width: 100%;
+    
 }
 
 
