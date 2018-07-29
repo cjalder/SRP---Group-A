@@ -1,5 +1,5 @@
 # SRP---Group-A
-Project Page for Steered Research Project - Group A 2018
+Project Page for Steered Research Project - Group A 2018, University of Leicester
 
 Pipeline_BASH:
 Contains bash scripts used to automate the running of the Original Pipline
