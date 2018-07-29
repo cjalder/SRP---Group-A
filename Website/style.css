@@ -242,16 +242,11 @@ ul.a {
     
 }
 
-
-
-.shiny{
-    padding: 10px 10px 10px 10px;
-}
-/*Responsive layout - depending on the size of screen changes layout options 
+/*Responsive layout - depending on the size of screen changes layout options */ 
 @media screen and (max-width: 600px) {
     .column {
         width:100%
         height: auto;
         position: relative;
     }
-} */
+}
